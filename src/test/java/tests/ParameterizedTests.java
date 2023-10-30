@@ -25,7 +25,7 @@ public class ParameterizedTests extends TestBase {
     }
 
     @MethodSource
-    @DisplayName("Test with using a MethodSource data provider as a homework for lesson #9")
+    @DisplayName("Parameterized test with using a MethodSource data provider")
     @ParameterizedTest
     public void steamLocaleTest(Locale locale, List<String> expectedButtons) {
         open("https://store.steampowered.com/");
