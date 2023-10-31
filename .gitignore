@@ -6,3 +6,4 @@
 /gradlew
 /gradlew.bat
 /config.json
+/src/test/resources/config.json

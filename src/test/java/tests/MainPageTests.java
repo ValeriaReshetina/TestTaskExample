@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$$x;
 
-public class ParameterizedTests extends TestBase {
+public class MainPageTests extends TestBase {
     static Stream<Arguments> steamLocaleTest() {
         return Stream.of(
                 Arguments.of(Locale.ENGLISH, List.of("STORE", "COMMUNITY", "ABOUT", "SUPPORT")),

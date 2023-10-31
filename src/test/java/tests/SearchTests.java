@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class SearchTests {
+public class SearchTests extends TestBase {
     @Test
     void cartTest() {
         $x("//input[contains(@placeholder, 'поиск')]").shouldHave(Condition.visible).click();
