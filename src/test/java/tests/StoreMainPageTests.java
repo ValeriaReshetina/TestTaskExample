@@ -37,10 +37,5 @@ public class StoreMainPageTests extends TestBase {
         step("check if the language has changed in menu items" + locale, () -> {
             storeMainPage.checkMainPageMenuItems(expectedButtons);
         });
-
-//        $x("//*[@id='language_pulldown']").click();
-//        $$x("//a[@class='popup_menu_item tight']").find(text(locale.getLanguage())).click();
-//        $$x("//div[@class='supernav_container']//a")
-//                .filter(visible).should(CollectionCondition.texts(expectedButtons));
     }
 }
