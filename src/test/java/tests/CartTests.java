@@ -45,7 +45,6 @@ public class CartTests extends TestBase {
     @Test
     @DisplayName("Check for successfully adding game to the cart")
     void addingGameToCartTest() {
-        storeMainPage.openMainStorePage();
         step("Open main page of Steam community", () -> {
             storeMainPage.openMainStorePage();
         });
