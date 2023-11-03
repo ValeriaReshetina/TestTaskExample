@@ -2,7 +2,7 @@ package data;
 
 public enum Locale {
     ENGLISH ("English"),
-    RUSSIAN ("Russian"),
+    CZECH ("Čeština"),
     DEUTSCH ("Deutsch");
 
     private final String language;

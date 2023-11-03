@@ -1,6 +1,5 @@
 package tests;
 
-import com.codeborne.selenide.CollectionCondition;
 import data.Locale;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -11,10 +10,7 @@ import pages.StoreMainPage;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$$x;
+import static io.qameta.allure.Allure.step;
 
 public class StoreMainPageTests extends TestBase {
 
@@ -23,7 +19,7 @@ public class StoreMainPageTests extends TestBase {
     static Stream<Arguments> steamLocaleTest() {
         return Stream.of(
                 Arguments.of(Locale.ENGLISH, List.of("STORE", "COMMUNITY", "ABOUT", "SUPPORT")),
-                Arguments.of(Locale.RUSSIAN, List.of("МАГАЗИН", "СООБЩЕСТВО", "ИНФОРМАЦИЯ", "ПОДДЕРЖКА")),
+                Arguments.of(Locale.CZECH, List.of("OBCHOD", "KOMUNITA", "INFORMACE", "PODPORA")),
                 Arguments.of(Locale.DEUTSCH, List.of("SHOP", "COMMUNITY", "INFO", "SUPPORT"))
         );
     }
@@ -32,10 +28,19 @@ public class StoreMainPageTests extends TestBase {
     @DisplayName("Parameterized test with using a MethodSource data provider")
     @ParameterizedTest
     public void steamLocaleTest(Locale locale, List<String> expectedButtons) {
-        storeMainPage.openMainStorePage();
-        $x("//*[@id='language_pulldown']").click();
-        $$x("//a[@class='popup_menu_item tight']").find(text(locale.getLanguage())).click();
-        $$x("//div[@class='supernav_container']//a")
-                .filter(visible).should(CollectionCondition.texts(expectedButtons));
+        step("Open main Steam community page", () -> {
+            storeMainPage.openMainStorePage();
+        });
+        step("Choose language " + locale, () -> {
+            storeMainPage.changeLanguage(locale);
+        });
+        step("check if the language has changed in menu items" + locale, () -> {
+            storeMainPage.checkMainPageMenuItems(expectedButtons);
+        });
+
+//        $x("//*[@id='language_pulldown']").click();
+//        $$x("//a[@class='popup_menu_item tight']").find(text(locale.getLanguage())).click();
+//        $$x("//div[@class='supernav_container']//a")
+//                .filter(visible).should(CollectionCondition.texts(expectedButtons));
     }
 }
