@@ -12,7 +12,6 @@ import pages.StoreMainPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Owner("Valeria Reshetina")
 @Feature("Cart")
 public class CartTests extends TestBase {
 
@@ -23,6 +22,7 @@ public class CartTests extends TestBase {
     String nameOfGame = "Chess Ultra";
 
     @Test
+    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Check for deleting selected game from the cart")
     void deletingGameFromCartTest() {
@@ -50,6 +50,7 @@ public class CartTests extends TestBase {
     }
 
     @Test
+    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Check for successfully adding game to the cart")
     void addingGameToCartTest() {

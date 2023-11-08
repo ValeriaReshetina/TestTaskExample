@@ -10,7 +10,6 @@ import pages.PlayersSearchPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Owner("Valeria Reshetina")
 public class CommunityMainTests extends TestBase {
 
     CommunityMainPage communityMainPage = new CommunityMainPage();
@@ -19,6 +18,7 @@ public class CommunityMainTests extends TestBase {
     String playerName = "TianoX";
 
     @Test
+    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Checking that players in Steam Community are searched and displayed correctly")
     void playersSearchTest() {

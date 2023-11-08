@@ -17,9 +17,8 @@ import java.util.stream.Stream;
 
 import static io.qameta.allure.Allure.step;
 
-@Owner("Valeria Reshetina")
 @Feature("Store")
-public class StoreMainPageTests extends TestBase {
+public class MainStoreTests extends TestBase {
 
     StoreMainPage storeMainPage = new StoreMainPage();
 
@@ -47,6 +46,7 @@ public class StoreMainPageTests extends TestBase {
     @DisplayName("Parameterized test to check that menu items are displayed " +
             "correctly depending on the selected language with using a MethodSource data provider")
     @ParameterizedTest
+    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.CRITICAL)
     public void steamLocaleTest(Locale locale, List<String> expectedButtons) {
         step("Open main Steam store page", () -> {
@@ -61,6 +61,7 @@ public class StoreMainPageTests extends TestBase {
     }
 
     @Test
+    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Check displaying of TOP sections on main store page for availability and congruence")
     void topSectionDisplayOnStorePageTest() {
@@ -78,6 +79,7 @@ public class StoreMainPageTests extends TestBase {
     }
 
     @Test
+    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Check displaying of SIDEBAR sections on main store page for availability and congruence")
     void sidebarSectionDisplayOnStorePageTest() {
