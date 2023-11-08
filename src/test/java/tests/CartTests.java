@@ -12,7 +12,6 @@ import pages.StoreMainPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Feature("Cart")
 public class CartTests extends TestBase {
 
     StoreMainPage storeMainPage = new StoreMainPage();

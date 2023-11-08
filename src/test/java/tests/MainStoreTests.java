@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import pages.StoreMainPage;
 
@@ -91,6 +92,26 @@ public class MainStoreTests extends TestBase {
                     .checkSidebarSections(secondNameOnSidebarSection)
                     .checkSidebarSections(thirdNameOnSidebarSection)
                     .checkSidebarSections(fourthNameOnSidebarSection);
+        });
+    }
+
+    @ParameterizedTest(name = "Check if header name {1} in locale {0}")
+    @Owner("Valeria Reshetina")
+    @Severity(SeverityLevel.CRITICAL)
+    @CsvSource(value = {
+            "Deutsch (немецкий), Steam installieren",
+            "English (английский), Install Steam",
+            "Čeština (чешский), Nainstalovat Steam"
+    })
+    void languageChangeTest(String language, String expectedHeader) {
+        step("Open main Steam store page", () -> {
+            storeMainPage.openMainStorePage();
+        });
+        step("Choose language " + language, () -> {
+            storeMainPage.changeLanguage(language);
+        });
+        step("Check presence of header " + expectedHeader, () -> {
+            storeMainPage.checkInstallSteamHeader(expectedHeader);
         });
     }
 }

@@ -16,11 +16,14 @@ public class StoreMainPage {
     private final SelenideElement storeNavigationPanel = $x("//div[@class='store_nav']"),
             storeSidebarSection = $x("//div[@class='home_page_gutter']"),
             searchInputField = $x("//input[@id='store_nav_search_term']"),
-            changingLanguageButton = $x("//*[@id='language_pulldown']");
+            changingLanguageButton = $x("//*[@id='language_pulldown']"),
+            languageDropdownList = $x("//div[@id='language_dropdown']"),
+            installSteamHeader = $x("//a[contains(@class, 'header_installsteam')]");
 
-    private final ElementsCollection collectionOfPopupMenuItemsTriggeredByChangeLanguageButton = $$x(
+    private final ElementsCollection collectionOfLanguagesOnChoiceTriggeredByChangeLanguageButton = $$x(
                     "//a[@class='popup_menu_item tight']"),
             subMenuItemsOnMainPage = $$x("//div[@class='supernav_container']//a");
+
 
     public StoreMainPage openMainStorePage() {
         open("https://store.steampowered.com/");
@@ -29,8 +32,15 @@ public class StoreMainPage {
 
     public StoreMainPage changeLanguage(Locale locale) {
         changingLanguageButton.click();
-        collectionOfPopupMenuItemsTriggeredByChangeLanguageButton.
+        collectionOfLanguagesOnChoiceTriggeredByChangeLanguageButton.
                 find(text(locale.getLanguage())).click();
+        return this;
+    }
+
+        public StoreMainPage changeLanguage(String language) {
+        changingLanguageButton.click();
+            collectionOfLanguagesOnChoiceTriggeredByChangeLanguageButton.
+                    find(text(language)).click();
         return this;
     }
 
@@ -51,6 +61,11 @@ public class StoreMainPage {
 
     public StoreMainPage searchInput(String input) {
         searchInputField.setValue(input).pressEnter();
+        return this;
+    }
+
+    public StoreMainPage checkInstallSteamHeader(String expectedHeader) {
+        installSteamHeader.shouldHave(text(expectedHeader));
         return this;
     }
 }
