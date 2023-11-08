@@ -49,7 +49,7 @@ public class StoreMainPageTests extends TestBase {
     @ParameterizedTest
     @Severity(SeverityLevel.CRITICAL)
     public void steamLocaleTest(Locale locale, List<String> expectedButtons) {
-        step("Open main Steam community page", () -> {
+        step("Open main Steam store page", () -> {
             storeMainPage.openMainStorePage();
         });
         step("Choose language " + locale, () -> {
