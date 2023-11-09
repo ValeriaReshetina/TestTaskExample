@@ -33,7 +33,7 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        screenshotAs("Last screenshot");
+        //screenshotAs("Last screenshot");
         pageSource();
         browserConsoleLogs();
         addVideo();
