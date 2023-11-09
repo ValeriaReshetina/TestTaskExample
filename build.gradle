@@ -42,11 +42,17 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-tasks.withType(Test) {
+task remote_test(type: Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform()
+    useJUnitPlatform {
+    }
 
-    test {
+    tasks.withType(Test) {
+        systemProperties(System.getProperties())
         useJUnitPlatform()
+
+        test {
+            useJUnitPlatform()
+        }
     }
 }
