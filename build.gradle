@@ -77,5 +77,5 @@ task remote_test(type: Test) {
         }
     }
 
-    systemProperty "chromeoptions.prefs", "intl.accept_languages=es"
+    systemProperty "chromeoptions.prefs", "intl.accept_languages=ru"
 }
