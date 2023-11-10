@@ -76,4 +76,6 @@ task remote_test(type: Test) {
             includeTags "Search"
         }
     }
+
+    systemProperty "chromeoptions.prefs", "intl.accept_languages=es"
 }
