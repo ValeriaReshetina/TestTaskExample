@@ -60,6 +60,5 @@ public class TestBase {
         addVideo();
 
         closeWebDriver();
-        closeWindow();
     }
 }
