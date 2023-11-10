@@ -38,6 +38,7 @@ public class TestBase {
                     "enableVNC", true,
                     "enableVideo", true
             ));
+            System.setProperty("chromeoptions.prefs", "intl.accept_languages=ru");
         }
     }
 
