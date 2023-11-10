@@ -43,38 +43,31 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-task remote_test(type: Test) {
+tasks.withType(Test) {
     systemProperties(System.getProperties())
+    useJUnitPlatform()
+}
+
+task Smoke_Test(type: Test) {
     useJUnitPlatform {
+        includeTags "Smoke"
     }
+}
 
-    tasks.withType(Test) {
-        systemProperties(System.getProperties())
-        systemProperty "chromeoptions.prefs", "intl.accept_languages=rus"
-        useJUnitPlatform()
+task Display_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "Display"
     }
+}
 
-    task Smoke_Test(type: Test) {
-        useJUnitPlatform {
-            includeTags "Smoke"
-        }
+task Cart_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "Cart"
     }
+}
 
-    task Display_test(type: Test) {
-        useJUnitPlatform {
-            includeTags "Display"
-        }
-    }
-
-    task Cart_test(type: Test) {
-        useJUnitPlatform {
-            includeTags "Cart"
-        }
-    }
-
-    task Search_test(type: Test) {
-        useJUnitPlatform {
-            includeTags "Search"
-        }
+task Search_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "Search"
     }
 }
