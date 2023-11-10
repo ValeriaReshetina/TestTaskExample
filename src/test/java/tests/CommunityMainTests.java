@@ -1,8 +1,6 @@
 package tests;
 
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.CommunityMainPage;
@@ -10,6 +8,9 @@ import pages.PlayersSearchPage;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner("Valeria Reshetina")
+@Epic(value = "Testing of Steam website")
+@Story("Search and display")
 public class CommunityMainTests extends TestBase {
 
     CommunityMainPage communityMainPage = new CommunityMainPage();
@@ -18,7 +19,6 @@ public class CommunityMainTests extends TestBase {
     String playerName = "TianoX";
 
     @Test
-    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Checking that players in Steam Community are searched and displayed correctly")
     void playersSearchTest() {

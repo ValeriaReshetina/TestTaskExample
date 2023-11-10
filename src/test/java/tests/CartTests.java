@@ -1,9 +1,6 @@
 package tests;
 
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
@@ -12,6 +9,9 @@ import pages.StoreMainPage;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner("Valeria Reshetina")
+@Epic(value = "Testing of Steam website")
+@Story("Items and cart")
 public class CartTests extends TestBase {
 
     StoreMainPage storeMainPage = new StoreMainPage();
@@ -21,7 +21,6 @@ public class CartTests extends TestBase {
     String nameOfGame = "Chess Ultra";
 
     @Test
-    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Check for deleting selected game from the cart")
     void deletingGameFromCartTest() {
@@ -49,7 +48,6 @@ public class CartTests extends TestBase {
     }
 
     @Test
-    @Owner("Valeria Reshetina")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Check for successfully adding game to the cart")
     void addingGameToCartTest() {
