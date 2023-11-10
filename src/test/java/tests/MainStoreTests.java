@@ -3,6 +3,7 @@ package tests;
 import data.Locale;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -17,7 +18,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Valeria Reshetina")
 @Epic(value = "Testing of Steam website")
-@Story("Availability and functionality of sections and headers, correct display depending on the selected language")
+@Story("Display and functionality of sections and headers, correct display depending on the selected language")
 public class MainStoreTests extends TestBase {
 
     StoreMainPage storeMainPage = new StoreMainPage();
@@ -46,6 +47,8 @@ public class MainStoreTests extends TestBase {
     @DisplayName("Parameterized test to check that menu items are displayed " +
             "correctly depending on the selected language with using a MethodSource data provider")
     @ParameterizedTest
+    @Tag("Smoke")
+    @Tag("Display")
     @Severity(SeverityLevel.CRITICAL)
     public void steamLocaleTest(Locale locale, List<String> expectedButtons) {
         step("Open main Steam store page", () -> {
@@ -60,6 +63,8 @@ public class MainStoreTests extends TestBase {
     }
 
     @Test
+    @Tag("Smoke")
+    @Tag("Display")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Check displaying of TOP sections on main store page for availability and congruence")
     void topSectionDisplayOnStorePageTest() {
@@ -77,6 +82,8 @@ public class MainStoreTests extends TestBase {
     }
 
     @Test
+    @Tag("Smoke")
+    @Tag("Display")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Check displaying of SIDEBAR sections on main store page for availability and congruence")
     void sidebarSectionDisplayOnStorePageTest() {
@@ -92,6 +99,8 @@ public class MainStoreTests extends TestBase {
     }
 
     @ParameterizedTest(name = "Check if header name {1} in locale {0}")
+    @Tag("Smoke")
+    @Tag("Display")
     @Severity(SeverityLevel.CRITICAL)
     @CsvSource(value = {
             "Deutsch (немецкий), Steam installieren",

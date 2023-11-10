@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CommunityMainPage;
 import pages.PlayersSearchPage;
@@ -19,6 +20,8 @@ public class CommunityMainTests extends TestBase {
     String playerName = "TianoX";
 
     @Test
+    @Tag("Smoke")
+    @Tag("Search")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Checking that players in Steam Community are searched and displayed correctly")
     void playersSearchTest() {

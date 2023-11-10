@@ -51,9 +51,29 @@ task remote_test(type: Test) {
     tasks.withType(Test) {
         systemProperties(System.getProperties())
         useJUnitPlatform()
+    }
 
-        test {
-            useJUnitPlatform()
+    task Smoke_Test(type: Test) {
+        useJUnitPlatform {
+            includeTags "Smoke"
+        }
+    }
+
+    task Display_test(type: Test) {
+        useJUnitPlatform {
+            includeTags "Display"
+        }
+    }
+
+    task Cart_test(type: Test) {
+        useJUnitPlatform {
+            includeTags "Cart"
+        }
+    }
+
+    task Search_test(type: Test) {
+        useJUnitPlatform {
+            includeTags "Search"
         }
     }
 }

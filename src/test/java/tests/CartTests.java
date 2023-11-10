@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.CartPage;
 import pages.StoreGamesPage;
@@ -21,6 +22,8 @@ public class CartTests extends TestBase {
     String nameOfGame = "Chess Ultra";
 
     @Test
+    @Tag("Smoke")
+    @Tag("Cart")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Check for deleting selected game from the cart")
     void deletingGameFromCartTest() {
@@ -48,6 +51,8 @@ public class CartTests extends TestBase {
     }
 
     @Test
+    @Tag("Smoke")
+    @Tag("Cart")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Check for successfully adding game to the cart")
     void addingGameToCartTest() {
