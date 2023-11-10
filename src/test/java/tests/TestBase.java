@@ -11,6 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
@@ -38,8 +39,17 @@ public class TestBase {
                     "enableVNC", true,
                     "enableVideo", true
             ));
-            System.setProperty("chromeoptions.prefs", "intl.accept_languages=ru");
+
         }
+        ChromeOptions options = new ChromeOptions();
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("intl.accept_languages", "ru");
+        options.setExperimentalOption("prefs", prefs);
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        Configuration.browserCapabilities = capabilities;
+        //System.setProperty("chromeoptions.prefs", "intl.accept_languages=ru");
     }
 
     @BeforeEach
