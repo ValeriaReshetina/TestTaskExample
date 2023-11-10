@@ -50,6 +50,7 @@ task remote_test(type: Test) {
 
     tasks.withType(Test) {
         systemProperties(System.getProperties())
+        systemProperty "chromeoptions.prefs", "intl.accept_languages=rus"
         useJUnitPlatform()
     }
 
@@ -76,6 +77,4 @@ task remote_test(type: Test) {
             includeTags "Search"
         }
     }
-
-    systemProperty "chromeoptions.prefs", "intl.accept_languages=ru"
 }
