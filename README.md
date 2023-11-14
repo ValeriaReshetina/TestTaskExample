@@ -1,7 +1,7 @@
 ## Project with UI-tests for [Steam](https://store.steampowered.com/)
 
 <p>
-  <img src="images/logo/Steam.png" alt="Logo of Steam">
+  <img src="images/logo/steam.png" alt="Logo of Steam">
 </p>
 
 ## Content
