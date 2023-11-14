@@ -30,7 +30,7 @@
 <img width="5%" title="Jenkins" src="images/logo/jenkins.png" alt="Jenkins Logo">
 <img width="5%" title="Selenoid" src="images/logo/selenoid.png" alt="Selenoid Logo">
 <img width="5%" title="Allure Report" src="images/logo/allure.png" alt="Allure Report Logo">
-<img width="5%" title="Allure TestOps" src="images/logo/allureTestOps.png" alt="Allure TestOps Logo">
+<img width="5%" title="Allure TestOps" src="images/logo/allureTestops.png" alt="Allure TestOps Logo">
 <img width="5%" title="Jira" src="images/logo/jira.png" alt="Jira Logo">
 <img width="5%" title="Telegram" src="images/logo/telegram.png" alt="Telegram Logo">
 </div>
