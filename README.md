@@ -21,18 +21,18 @@
 ## 🛠️ Stack of technologies
 
 <div style="text-align: center;">
-<img width="10%" title="IntelliJ IDEA" src="images/logo/idea.png" alt="IntelliJ IDEA Logo">
-<img width="10%" title="GitHub" src="images/logo/github.png" alt="GitHub Logo">
-<img width="10%" title="Java" src="images/logo/java.png" alt="Java Logo">
-<img width="10%" title="Junit5" src="images/logo/junit5.png" alt="JUnit5 Logo">
-<img width="10%" title="Gradle" src="images/logo/gradle.png" alt="Gradle Logo">
-<img width="10%" title="Selenide" src="images/logo/selenide.png" alt="Selenide Logo">
-<img width="10%" title="Jenkins" src="images/logo/jenkins.png" alt="Jenkins Logo">
-<img width="10%" title="Selenoid" src="images/logo/selenoid.png" alt="Selenoid Logo">
-<img width="10%" title="Allure Report" src="images/logo/allure.png" alt="Allure Report Logo">
-<img width="10%" title="Allure TestOps" src="images/logo/allureTestops.png" alt="Allure TestOps Logo">
-<img width="10%" title="Jira" src="images/logo/jira.png" alt="Jira Logo">
-<img width="10%" title="Telegram" src="images/logo/telegram.png" alt="Telegram Logo">
+<img width="7%" title="IntelliJ IDEA" src="images/logo/idea.png" alt="IntelliJ IDEA Logo">
+<img width="7%" title="GitHub" src="images/logo/github.png" alt="GitHub Logo">
+<img width="7%" title="Java" src="images/logo/java.png" alt="Java Logo">
+<img width="7%" title="Junit5" src="images/logo/junit5.png" alt="JUnit5 Logo">
+<img width="7%" title="Gradle" src="images/logo/gradle.png" alt="Gradle Logo">
+<img width="7%" title="Selenide" src="images/logo/selenide.png" alt="Selenide Logo">
+<img width="7%" title="Jenkins" src="images/logo/jenkins.png" alt="Jenkins Logo">
+<img width="7%" title="Selenoid" src="images/logo/selenoid.png" alt="Selenoid Logo">
+<img width="7%" title="Allure Report" src="images/logo/allure.png" alt="Allure Report Logo">
+<img width="7%" title="Allure TestOps" src="images/logo/allureTestops.png" alt="Allure TestOps Logo">
+<img width="7%" title="Jira" src="images/logo/jira.png" alt="Jira Logo">
+<img width="7%" title="Telegram" src="images/logo/telegram.png" alt="Telegram Logo">
 </div>
 
 ## 📄 Description
