@@ -28,7 +28,7 @@ public interface WebConfig extends Config {
     @DefaultValue("")
     String getRemoteUrl();
 
-    @Key("remoteAuth")
+    @Key("selenoidAuth")
     @DefaultValue("")
     String getRemoteAuth();
 }

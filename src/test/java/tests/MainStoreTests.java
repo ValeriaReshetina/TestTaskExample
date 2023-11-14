@@ -45,7 +45,7 @@ public class MainStoreTests extends TestBase {
 
     @MethodSource
     @DisplayName("Parameterized test to check that menu items are displayed " +
-            "correctly depending on the selected language with using a MethodSource data provider")
+            "correctly depending on the selected language with using a MethodSource as a data provider")
     @ParameterizedTest
     @Tag("Smoke")
     @Tag("Display")
@@ -66,7 +66,7 @@ public class MainStoreTests extends TestBase {
     @Tag("Smoke")
     @Tag("Display")
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Check displaying of TOP sections on main store page for availability and congruence")
+    @DisplayName("Check correct displaying of TOP sections on main store page")
     void topSectionDisplayOnStorePageTest() {
         step("Open main Steam store page", () -> {
             storeMainPage.openMainStorePage();
@@ -85,7 +85,7 @@ public class MainStoreTests extends TestBase {
     @Tag("Smoke")
     @Tag("Display")
     @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("Check displaying of SIDEBAR sections on main store page for availability and congruence")
+    @DisplayName("Check correct displaying of SIDEBAR sections on main store page")
     void sidebarSectionDisplayOnStorePageTest() {
         step("Open main Steam store page", () -> {
             storeMainPage.openMainStorePage();
