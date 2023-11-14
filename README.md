@@ -1,4 +1,4 @@
-## Automated tests for demo site [Steam](https://store.steampowered.com/) – Magento eCommerce
+## Project with UI-tests for [Steam](https://store.steampowered.com/)
 
 <p>
   <img src="images/logo/Steam.png" alt="Logo of Steam">
