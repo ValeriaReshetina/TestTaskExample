@@ -37,7 +37,7 @@
 
 ## 📄 Description
 
-The test project consists of UI tests and includes the following features:
+This test project consists of UI tests and includes the following features:
 
 - ✔️ **Page Object Pattern**: Utilizes the `Page Object` pattern for better test organization and maintenance.
 - ✔️ **Parameterized Tests**: Employs parameterized tests to efficiently test multiple scenarios with different input
@@ -174,13 +174,10 @@ Grouping of tests by checked functionality
   <img src="images/screenshots/testsGrouping.png" alt="allure5" width="800">
 </div>
 
-## <img width="8%" title="Allure TestOPS" src="images/logo/allureTestops.png"> Integration with [Allure TestOps](https://allure.autotests.cloud/launch/25171)
+## <img width="8%" title="Allure TestOPS" src="images/logo/allureTestops.png"> Integration with [Allure TestOps](https://allure.autotests.cloud/launch/32151)
 
 <div style="text-align: center;">
-  <img src="media/Allure_TestOps_dashboard.png" alt="allure5" width="800">
-</div>
-<div style="text-align: center;">
-  <img src="media/Allure_TestOps_tests.png" alt="allure5" width="800">
+  <img src="images/screenshots/testops2.png" alt="allure5" width="800">
 </div>
 
 ## <img width="8%" title="Jira" src="images/logo/jira.png"> Integration with [Jira](https://jira.autotests.cloud/browse/HOMEWORK-708)
