@@ -174,6 +174,7 @@ appropriate values based on your Jenkins configuration and test requirements.
 
 ## <img width="8%" title="Allure TestOPS" src="images/logo/allureTestops.png"> Integration with [Allure TestOps](https://allure.autotests.cloud/launch/32151)
 
+#### Integration of <code><strong>Allure TestOps</strong></code> with <code><strong>Jenkins</strong></code>  allows you to run several custom tests and monitor their execution online.
 ### Allure TestOps dashboard
 
 <div style="text-align: center;">
@@ -202,14 +203,13 @@ After passing all the tests, an automatic report is sent to the <code>Telegram N
 
 ## <img width="8%" title="Selenoid" src="images/logo/selenoid.png"> Test running example in Selenoid
 
-A video is attached to each test in the Allure report.
+#### A video is attached to each test in the Allure report.
 
 <div style="text-align: center;">
   <img title="Selenoid Video" src="images/video/cartTestVideo.gif" alt="Selenoid Video demonstrating its usage">
 </div>
 
 
-Moreover, in each test run of the Allure report you can see <code>Browser console logs</code> and <code>Page
-source</code>.
+#### Moreover, in each test run of the Allure report you can see <code>Browser console logs</code> and <code>Page source</code>.
 
 [Back to content](#content)
