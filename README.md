@@ -71,23 +71,21 @@ This test project consists of UI tests and includes the following features:
 
 ## 🔌 Running tests from the terminal
 
-To run tests from the terminal using Gradle, you can use the following commands:
+To run tests locally from the terminal you can use the following command:
 
 ```bash
-gradle clean test -Denv='local'
+gradle clean test
 ```
 
-When using the `local` environment, the tests will be executed locally on your machine.
+To run tests remotely using Selenide, you can use the following command:
 
 ```bash
-gradle clean test -Denv='remote'
+gradle clean test 
+"-Dbrowser=chrome" 
+"-DbrowserVersion=100" 
+"-DbrowserSize=2560x1440" 
+"-DremoteUrl=selenoid.autotests.cloud"
 ```
-
-When using the `remote` environment, the tests will be executed remotely using Selenide.
-
-By using the `-D` flag followed by the property name (`env` in this case) and its corresponding value (`local`
-or `remote`), you can pass system properties to your tests during the Gradle execution. The tests can then access these
-properties to determine the execution behavior based on the specified environment.
 
 ## 🔧 Properties
 
@@ -104,7 +102,6 @@ browserSize=
 >- *browser* - it's a choice of browser for UI tests
 >- *browserVersion* - browser and it's version
 >- *browserSize* - size of browser
-> - *selenoidUrl* - URL for remote WebDriver (Selenoid)
 
 ### Remote properties are in `remote.properties` file:
 
