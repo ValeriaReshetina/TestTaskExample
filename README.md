@@ -116,7 +116,7 @@ selenoidAuth=
 
 It is needed to adapt remote.properties files locally based on your credentials to remote Selenoid.
 
-## <img width="7%" title="Jenkins" src="images/logo/jenkins.png"> Running tests in [Jenkins](https://jenkins.autotests.cloud/job/Students/job/18-alin_laegnor-luma_ui_tests/)
+## <img width="7%" title="Jenkins" src="images/logo/jenkins.png"> Running tests in [Jenkins](https://jenkins.autotests.cloud/job/21-ValeriaReshetina-diploma-project-UI/)
 
 ### To execute the tests in Jenkins, use the following command:
 
