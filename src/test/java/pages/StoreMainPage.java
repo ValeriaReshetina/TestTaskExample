@@ -17,7 +17,6 @@ public class StoreMainPage {
             storeSidebarSection = $x("//div[@class='home_page_gutter']"),
             searchInputField = $x("//input[@id='store_nav_search_term']"),
             changingLanguageButton = $x("//*[@id='language_pulldown']"),
-            languageDropdownList = $x("//div[@id='language_dropdown']"),
             installSteamHeader = $x("//a[contains(@class, 'header_installsteam')]");
 
     private final ElementsCollection collectionOfLanguagesOnChoiceTriggeredByChangeLanguageButton = $$x(
